@@ -835,6 +835,29 @@ button {
 }
 
 /* Header Navigation Default */
+
+/* Default: Hide the "Contact" item */
+.mobile-contact {
+    display: none !important; /* Ensures it never shows on desktop */
+}
+
+/* Show "Contact" only inside the mobile menu */
+@media screen and (max-width: 1366px) and (hover: none) and (pointer: coarse) {
+    .mobile-contact {
+        display: block !important;  /* Show it in the mobile menu */
+    }
+
+    /* Ensure it appears correctly inside the mobile menu */
+    .mobile-contact a {
+        font-size: 18px;
+        font-weight: bold;
+        color: #162542;
+        padding: 12px 20px;
+        text-decoration: none;
+        display: block;
+    }
+}
+
 .nav-ml-auto{
     margin-left: auto;
 }
