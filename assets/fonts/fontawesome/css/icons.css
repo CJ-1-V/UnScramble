@@ -1,0 +1,44 @@
+/* Only the Font Awesome 5 Pro icons this site uses, as woff2 subsets. */
+@font-face {
+    font-family: 'Font Awesome 5 Pro';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url('../webfonts/fa-light-300.used.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Font Awesome 5 Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('../webfonts/fa-regular-400.used.woff2') format('woff2');
+}
+.fa,
+.fal,
+.far {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+    font-family: 'Font Awesome 5 Pro';
+}
+.fal { font-weight: 300; }
+.far { font-weight: 400; }
+.fa-times:before { content: '\f00d'; }
+.fa-clock:before { content: '\f017'; }
+.fa-phone:before { content: '\f095'; }
+.fa-angle-left:before { content: '\f104'; }
+.fa-angle-right:before { content: '\f105'; }
+.fa-angle-up:before { content: '\f106'; }
+.fa-angle-down:before { content: '\f107'; }
+.fa-long-arrow-right:before { content: '\f178'; }
+.fa-envelope-open:before { content: '\f2b6'; }
+.fa-long-arrow-alt-right:before { content: '\f30b'; }
+.fa-map-marker-alt:before { content: '\f3c5'; }
+.fa-bezier-curve:before { content: '\f55b'; }
+.fa-bullseye-arrow:before { content: '\f648'; }
+.fa-envelope-open-text:before { content: '\f658'; }
+.fa-ball-pile:before { content: '\f77e'; }

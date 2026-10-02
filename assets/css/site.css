@@ -1,0 +1,39 @@
+/* Page-specific fixes that sit on top of the template. */
+
+img {
+    height: auto;
+}
+
+.hero-banner-v3 .hero-pattern {
+    background-image: url('../images/hero/hero-pattern.png');
+    background-image: image-set(
+        url('../images/hero/hero-pattern.webp') type('image/webp'),
+        url('../images/hero/hero-pattern.png') type('image/png')
+    );
+}
+
+.main-btn.consult-btn {
+    text-transform: none;
+}
+
+/* The hero background is the same purple as the default button. */
+.hero-banner-v3 .consult-btn {
+    background-color: #fff;
+    color: var(--blue-dark);
+}
+.hero-banner-v3 .consult-btn:hover,
+.hero-banner-v3 .consult-btn:focus {
+    background-color: var(--heading);
+    color: #fff;
+}
+
+.hero-banner-v3 .hero-content .consult-btn,
+.section-title .consult-btn {
+    margin-top: 10px;
+}
+
+@media (max-width: 991px) {
+    .navigation-style-v1 .header-right-nav ul li.nav-button {
+        display: none;
+    }
+}
