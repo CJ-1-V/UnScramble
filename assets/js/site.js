@@ -138,19 +138,59 @@
     var furthest = 0;
     var sending = false;
 
+    function isConsult() {
+      return val("service-needed") === "consult";
+    }
+
+    function skipped(step) {
+      if (!step || !isConsult()) return false;
+      var key = step.getAttribute("data-step");
+      return key === "schedule" || key === "crew";
+    }
+
+    function stepAfter(from) {
+      for (var i = from + 1; i < steps.length; i += 1) {
+        if (!skipped(steps[i])) return i;
+      }
+      return from;
+    }
+
+    function stepBefore(from) {
+      for (var i = from - 1; i >= 0; i -= 1) {
+        if (!skipped(steps[i])) return i;
+      }
+      return from;
+    }
+
     function paint() {
       steps.forEach(function (step, i) {
-        step.hidden = i !== index;
+        step.hidden = skipped(step) || i !== index;
       });
-      qsa("[data-goto]", form).forEach(function (button, i) {
-        button.disabled = i > furthest;
-        if (i === index) button.setAttribute("aria-current", "step");
+      var visible = steps.filter(function (step) { return !skipped(step); });
+      qsa("[data-goto]", form).forEach(function (button) {
+        var target = Number(button.getAttribute("data-goto"));
+        var hide = skipped(steps[target]);
+        button.hidden = hide;
+        if (button.parentElement) button.parentElement.hidden = hide;
+        button.disabled = hide || target > furthest;
+        if (target === index) button.setAttribute("aria-current", "step");
         else button.removeAttribute("aria-current");
       });
+      var pos = visible.indexOf(steps[index]);
+      if (pos < 0) pos = 0;
       var bar = qs(".progress__track span", form);
-      if (bar) bar.style.width = ((index + 1) / steps.length * 100) + "%";
+      if (bar && visible.length) bar.style.width = ((pos + 1) / visible.length * 100) + "%";
       var back = qs("[data-back]", steps[index]);
       if (back) back.hidden = index === 0;
+    }
+
+    function syncConsultUi() {
+      var wrap = document.getElementById("retainer-wrap");
+      var hint = document.getElementById("consult-hint");
+      if (wrap) wrap.hidden = !isConsult();
+      if (hint) hint.hidden = !isConsult();
+      if (skipped(steps[index])) index = stepBefore(index);
+      paint();
     }
 
     function show(next, focusHeading) {
@@ -176,8 +216,9 @@
       }
 
       if (key === "farm") {
-        need("farm-name", "Enter the farm name.");
-        need("site-address", "Enter the site address.");
+        need("service-needed", "Choose the service you need.");
+        need("farm-name", "Enter the business or farm name.");
+        if (!isConsult()) need("site-address", "Enter the site address.");
         need("contact-name", "Enter a contact name.");
         if (!val("contact-phone")) {
           setError("contact-phone", "Enter a phone number.");
@@ -305,6 +346,7 @@
 
     function validateAll() {
       for (var i = 0; i < steps.length; i += 1) {
+        if (skipped(steps[i])) continue;
         if (!validateStep(steps[i])) {
           show(i, false);
           return false;
@@ -324,6 +366,16 @@
 
     function buildLabour() {
       var data = new FormData();
+      var serviceLabels = {
+        harvest: "Harvest crew",
+        "year-round": "Year-round staffing",
+        consult: "HR retainer or a free consult"
+      };
+      var tierLabels = {
+        hiring: "Hiring support",
+        operations: "People operations",
+        retainer: "Full retainer"
+      };
       var roles = [
         ["graders", "Graders"],
         ["packers", "Packers"],
@@ -334,7 +386,11 @@
         ["field", "Field labour"],
         ["supervisors", "Shift supervisors"]
       ];
-      data.append("Farm name", val("farm-name"));
+      data.append("Service needed", serviceLabels[val("service-needed")] || dash(val("service-needed")));
+      if (isConsult() && val("retainer-tier")) {
+        data.append("Retainer interest", tierLabels[val("retainer-tier")] || val("retainer-tier"));
+      }
+      data.append("Business or farm name", val("farm-name"));
       data.append("Site address", val("site-address"));
       data.append("Contact name", val("contact-name"));
       data.append("Contact phone", val("contact-phone"));
@@ -426,7 +482,13 @@
       if (errorBox) errorBox.hidden = true;
 
       var data = kind === "labour" ? buildLabour() : buildApply();
-      var subject = spec.subject
+      var subjectTemplate = spec.subject;
+      if (kind === "labour" && val("service-needed") === "consult") {
+        subjectTemplate = "HR consult — {farm}";
+      } else if (kind === "labour" && val("service-needed") === "year-round") {
+        subjectTemplate = "Year-round staff request — {farm}";
+      }
+      var subject = subjectTemplate
         .replace("{farm}", val("farm-name"))
         .replace("{name}", val("full-name"));
       var reply = kind === "labour" ? val("contact-email") : val("email");
@@ -469,8 +531,8 @@
 
     form.addEventListener("submit", function (event) {
       event.preventDefault();
-      if (index < steps.length - 1) {
-        if (validateStep(steps[index])) show(index + 1, true);
+      if (stepAfter(index) !== index) {
+        if (validateStep(steps[index])) show(stepAfter(index), true);
         return;
       }
       if (validateAll()) send();
@@ -482,11 +544,12 @@
       var back = origin.closest("[data-back]");
       var goto = origin.closest("[data-goto]");
       if (next) {
-        if (validateStep(steps[index])) show(index + 1, true);
+        if (validateStep(steps[index])) show(stepAfter(index), true);
       } else if (back) {
-        show(index - 1, true);
-      } else if (goto && !goto.disabled) {
-        show(Number(goto.getAttribute("data-goto")), true);
+        show(stepBefore(index), true);
+      } else if (goto && !goto.disabled && !goto.hidden) {
+        var target = Number(goto.getAttribute("data-goto"));
+        if (!skipped(steps[target])) show(target, true);
       }
     });
 
@@ -527,7 +590,23 @@
       heading.tabIndex = -1;
     });
     if (thanks) thanks.tabIndex = -1;
-    paint();
+
+    var serviceNeeded = document.getElementById("service-needed");
+    if (serviceNeeded) {
+      var params = new URLSearchParams(window.location.search);
+      var service = params.get("service");
+      var services = ["harvest", "year-round", "consult"];
+      if (services.indexOf(service) !== -1) serviceNeeded.value = service;
+      var tierEl = document.getElementById("retainer-tier");
+      var tier = params.get("tier");
+      var tiers = ["hiring", "operations", "retainer"];
+      if (tierEl && tiers.indexOf(tier) !== -1) {
+        tierEl.value = tier;
+        serviceNeeded.value = "consult";
+      }
+      serviceNeeded.addEventListener("change", syncConsultUi);
+    }
+    syncConsultUi();
   }
 
   function initMotion() {
