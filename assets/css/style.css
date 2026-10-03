@@ -35,27 +35,12 @@
 /*---==========================
    01. Start Common  css 
 =========================---*/
-/* Google Font */
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&amp;display=swap');
-
-/* Animate css */
-@import url(../vendor/animate.css);
-/* Flaticon css */
-@import url(../fonts/flaticon/flaticon.css);
-/* Fontawesome css */
-@import url(../fonts/fontawesome/css/all.min.css);
-/* Bootstrap css */
-@import url(../vendor/bootstrap/css/bootstrap.min.css);
-/* Slick css */
-@import url(../vendor/slick/slick.css);
-/* Magnific css */
-@import url(../vendor/magnific-popup/dist/magnific-popup.css);
-/* Nice-select css */
-@import url(../vendor/nice-select/css/nice-select.css);
+/* Vendor stylesheets are linked from each page so they download in parallel.
+   Kept out of this file to avoid a render-blocking @import chain. */
 
 /* Root css */
 :root {
-	--text-color: #808285;
+	--text-color: #6c6e71;
 	--heading: #191919;
     --blue-dark: #5956e9;
 	--light-gray: #fafafb;

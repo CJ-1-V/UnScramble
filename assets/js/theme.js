@@ -97,10 +97,9 @@
         mainMenu();
     });
 
-    //===== Prealoder
-    $(window).on('load', function(event) {
-        $('.preloader').delay(500).fadeOut('500');
-    })
+    //===== Preloader
+    // Hide once scripts are ready instead of waiting for every image,
+    // and skip the extra half-second delay.
     
     //===== Sticky
     $(window).on('scroll', function(event) {
@@ -307,6 +306,7 @@
     //===== Wow js
     
     new WOW().init();
+    $('.preloader').fadeOut(200);
 
     // Item Active
     $('.counter-area-v2').on('mouseover', '.counter-item', function() {
