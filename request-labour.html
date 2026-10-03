@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Request Labour — UnScramble</title>
+  <meta name="description" content="Tell UnScramble the start date, crew, and site. We supply screened harvest labour across Prince Edward Island.">
+  <link rel="canonical" href="https://www.unscramble.ca/request-labour.html">
+  <meta name="theme-color" content="#332E57">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Unscramble">
+  <meta property="og:title" content="Request Labour — UnScramble">
+  <meta property="og:description" content="Tell UnScramble the start date, crew, and site. We supply screened harvest labour across Prince Edward Island.">
+  <meta property="og:url" content="https://www.unscramble.ca/request-labour.html">
+  <meta property="og:image" content="https://www.unscramble.ca/assets/images/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="en_CA">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Request Labour — UnScramble">
+  <meta name="twitter:description" content="Tell UnScramble the start date, crew, and site. We supply screened harvest labour across Prince Edward Island.">
+  <meta name="twitter:image" content="https://www.unscramble.ca/assets/images/og-image.jpg">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/brand/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/brand/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="preload" href="assets/fonts/source-serif-4-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/dm-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap header__bar">
+      <a class="brand" href="index.html">
+        <img src="assets/brand/unscramble-logo.svg" width="420" height="154" alt="UnScramble, The HR Company">
+      </a>
+      <nav class="nav-main" id="site-nav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html#how">How it works</a></li>
+          <li><a href="index.html#roles">Roles</a></li>
+          <li><a href="index.html#why">Why UnScramble</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header__actions">
+        <a class="btn btn-gold" href="request-labour.html" aria-current="page">Request Labour</a>
+        <a class="btn btn-line" href="apply.html">Find Work</a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+          <span class="nav-toggle__bars" aria-hidden="true"></span>
+          <span class="visually-hidden">Menu</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="section">
+    <div class="wrap form-layout">
+      <header class="form-intro">
+        <p class="kicker">For farms</p>
+        <h1>Request labour</h1>
+        <p class="lede">Four things get a crew moving: start date, headcount, farm name, and site address. The rest of this form is the schedule and the site.</p>
+        <ol>
+          <li>We read the request.</li>
+          <li>We confirm the crew and the start.</li>
+          <li>Screened workers are scheduled. We run payroll.</li>
+        </ol>
+        <p class="note">Prefer the phone? <a href="tel:+19022004888">+1 (902) 200-4888</a></p>
+        <noscript>
+          <p class="noscript">This form needs JavaScript. Call <a href="tel:+19022004888">+1 (902) 200-4888</a> or email <a href="mailto:admin@unscramble.ca">admin@unscramble.ca</a>.</p>
+        </noscript>
+      </header>
+
+      <div class="form-card">
+        <!-- Recipients live only in assets/js/forms-config.js -->
+        <form data-form="labour" method="post" action="#" novalidate>
+          <ol class="progress" aria-label="Form progress">
+            <li><button type="button" data-goto="0">Farm</button></li>
+            <li><button type="button" data-goto="1">Schedule</button></li>
+            <li><button type="button" data-goto="2">Crew</button></li>
+            <li><button type="button" data-goto="3">Site</button></li>
+          </ol>
+          <div class="progress__track" aria-hidden="true"><span></span></div>
+
+          <div class="step" data-step="farm">
+            <h2>The farm</h2>
+            <p class="step-lead">Where should the crew report, and who do we call?</p>
+            <div class="field">
+              <label for="farm-name">Farm name</label>
+              <input id="farm-name" type="text" autocomplete="organization" maxlength="120">
+              <p class="field-error" id="farm-name-error" hidden></p>
+            </div>
+            <div class="field">
+              <label for="site-address">Site address</label>
+              <textarea id="site-address" rows="3" autocomplete="street-address" maxlength="400"></textarea>
+              <p class="field-error" id="site-address-error" hidden></p>
+            </div>
+            <div class="field">
+              <label for="contact-name">Contact name</label>
+              <input id="contact-name" type="text" autocomplete="name" maxlength="120">
+              <p class="field-error" id="contact-name-error" hidden></p>
+            </div>
+            <div class="grid-2">
+              <div class="field">
+                <label for="contact-phone">Phone</label>
+                <input id="contact-phone" type="tel" autocomplete="tel" inputmode="tel" maxlength="30">
+                <p class="field-error" id="contact-phone-error" hidden></p>
+              </div>
+              <div class="field">
+                <label for="contact-email">Email</label>
+                <input id="contact-email" type="email" autocomplete="email" inputmode="email" maxlength="254">
+                <p class="field-error" id="contact-email-error" hidden></p>
+              </div>
+            </div>
+            <label class="check">
+              <input id="billing-different" type="checkbox">
+              <span>Billing contact is different from the person on site</span>
+            </label>
+            <div id="billing-fields" hidden>
+              <div class="field">
+                <label for="billing-name">Billing contact</label>
+                <input id="billing-name" type="text" autocomplete="name" maxlength="120">
+                <p class="field-error" id="billing-name-error" hidden></p>
+              </div>
+              <div class="field">
+                <label for="billing-email">Billing email</label>
+                <input id="billing-email" type="email" autocomplete="email" inputmode="email" maxlength="254">
+                <p class="field-error" id="billing-email-error" hidden></p>
+              </div>
+            </div>
+            <div class="step-actions">
+              <button class="btn btn-line" type="button" data-back hidden>Back</button>
+              <button class="btn btn-gold" type="button" data-next>Continue</button>
+            </div>
+          </div>
+
+          <div class="step" data-step="schedule" hidden>
+            <h2>The schedule</h2>
+            <p class="step-lead">When the day starts, and how long the season runs.</p>
+            <div class="grid-2">
+              <div class="field">
+                <label for="start-date">Start date</label>
+                <input id="start-date" type="date">
+                <p class="field-error" id="start-date-error" hidden></p>
+              </div>
+              <div class="field">
+                <label for="start-time">Daily start time</label>
+                <input id="start-time" type="time" aria-describedby="start-time-hint">
+                <p class="hint" id="start-time-hint">For example, 6:30 am.</p>
+                <p class="field-error" id="start-time-error" hidden></p>
+              </div>
+            </div>
+            <div class="field-pair" id="shift-window" tabindex="-1">
+              <p class="hint" id="shift-window-hint">An expected end time or a shift length. One is enough.</p>
+              <div class="grid-2">
+                <div class="field">
+                  <label for="end-time">Expected end time</label>
+                  <input id="end-time" type="time">
+                </div>
+                <div class="field">
+                  <label for="shift-length">Shift length</label>
+                  <input id="shift-length" type="text" maxlength="40" aria-describedby="shift-length-hint">
+                  <p class="hint" id="shift-length-hint">For example, 10 hours.</p>
+                </div>
+              </div>
+              <p class="field-error" id="shift-window-error" hidden></p>
+            </div>
+            <div class="field">
+              <label for="days-per-week">Days per week</label>
+              <select id="days-per-week">
+                <option value="">Choose</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+              </select>
+              <p class="field-error" id="days-per-week-error" hidden></p>
+            </div>
+            <fieldset id="weekends" tabindex="-1">
+              <legend>Weekends included?</legend>
+              <div class="choices">
+                <label class="choice"><input type="radio" name="Weekends included" value="Yes"> <span>Yes</span></label>
+                <label class="choice"><input type="radio" name="Weekends included" value="No"> <span>No</span></label>
+              </div>
+              <p class="field-error" id="weekends-error" hidden></p>
+            </fieldset>
+            <fieldset id="shift" tabindex="-1">
+              <legend>Day or night shift</legend>
+              <div class="choices">
+                <label class="choice"><input type="radio" name="Shift" value="Day"> <span>Day</span></label>
+                <label class="choice"><input type="radio" name="Shift" value="Night"> <span>Night</span></label>
+                <label class="choice"><input type="radio" name="Shift" value="Both"> <span>Both</span></label>
+              </div>
+              <p class="field-error" id="shift-error" hidden></p>
+            </fieldset>
+            <div class="field-pair" id="season-window" tabindex="-1">
+              <p class="hint">An estimated end date or a season length. One is enough.</p>
+              <div class="grid-2">
+                <div class="field">
+                  <label for="end-date">Estimated end date</label>
+                  <input id="end-date" type="date">
+                  <p class="field-error" id="end-date-error" hidden></p>
+                </div>
+                <div class="field">
+                  <label for="season-length">Season length</label>
+                  <input id="season-length" type="text" maxlength="80" aria-describedby="season-length-hint">
+                  <p class="hint" id="season-length-hint">For example, through November, or 8 weeks.</p>
+                </div>
+              </div>
+              <p class="field-error" id="season-window-error" hidden></p>
+            </div>
+            <div class="step-actions">
+              <button class="btn btn-line" type="button" data-back>Back</button>
+              <button class="btn btn-gold" type="button" data-next>Continue</button>
+            </div>
+          </div>
+
+          <div class="step" data-step="crew" hidden>
+            <h2>The crew</h2>
+            <p class="step-lead">Enter a number only for the roles you need. Leave the rest blank.</p>
+            <div id="crew" tabindex="-1">
+              <div class="crew-grid">
+                <div class="field"><label for="graders">Graders</label><input id="graders" data-headcount type="number" inputmode="numeric" min="0" max="500" step="1"><p class="field-error" id="graders-error" hidden></p></div>
+                <div class="field"><label for="packers">Packers</label><input id="packers" data-headcount type="number" inputmode="numeric" min="0" max="500" step="1"><p class="field-error" id="packers-error" hidden></p></div>
+                <div class="field"><label for="drivers">Truck drivers</label><input id="drivers" data-headcount type="number" inputmode="numeric" min="0" max="500" step="1"><p class="field-error" id="drivers-error" hidden></p></div>
+                <div class="field"><label for="forklift">Forklift &amp; machinery</label><input id="forklift" data-headcount type="number" inputmode="numeric" min="0" max="500" step="1"><p class="field-error" id="forklift-error" hidden></p></div>
+                <div class="field"><label for="washers">Pressure washers</label><input id="washers" data-headcount type="number" inputmode="numeric" min="0" max="500" step="1"><p class="field-error" id="washers-error" hidden></p></div>
+                <div class="field"><label for="cleaners">Cleaners</label><input id="cleaners" data-headcount type="number" inputmode="numeric" min="0" max="500" step="1"><p class="field-error" id="cleaners-error" hidden></p></div>
+                <div class="field"><label for="field">Field labour</label><input id="field" data-headcount type="number" inputmode="numeric" min="0" max="500" step="1"><p class="field-error" id="field-error" hidden></p></div>
+                <div class="field"><label for="supervisors">Shift supervisors</label><input id="supervisors" data-headcount type="number" inputmode="numeric" min="0" max="500" step="1"><p class="field-error" id="supervisors-error" hidden></p></div>
+              </div>
+              <p class="crew-total" id="crew-total" aria-live="polite">Crew total: 0</p>
+              <p class="field-error" id="crew-error" hidden></p>
+            </div>
+            <div class="step-actions">
+              <button class="btn btn-line" type="button" data-back>Back</button>
+              <button class="btn btn-gold" type="button" data-next>Continue</button>
+            </div>
+          </div>
+
+          <div class="step" data-step="site" hidden>
+            <h2>The site</h2>
+            <p class="step-lead">Optional. Anything that keeps the first day smooth.</p>
+            <fieldset>
+              <legend>Licences and requirements</legend>
+              <div class="choices">
+                <label class="choice"><input id="lic-az" type="checkbox"> <span>AZ for drivers</span></label>
+                <label class="choice"><input id="lic-dz" type="checkbox"> <span>DZ for drivers</span></label>
+                <label class="choice"><input id="lic-forklift" type="checkbox"> <span>Forklift experience</span></label>
+                <label class="choice"><input id="lic-bin" type="checkbox"> <span>Bin piler experience</span></label>
+              </div>
+              <p class="hint">If you asked for truck drivers, tick AZ or DZ when one is required.</p>
+            </fieldset>
+            <div class="field">
+              <label for="other-requirements">Other requirements</label>
+              <textarea id="other-requirements" rows="3" maxlength="1000"></textarea>
+            </div>
+            <div class="field">
+              <label for="ppe">PPE or site rules</label>
+              <textarea id="ppe" rows="3" maxlength="1000"></textarea>
+            </div>
+            <div class="field">
+              <label for="parking">Parking and transport</label>
+              <textarea id="parking" rows="3" maxlength="1000"></textarea>
+            </div>
+            <div class="field">
+              <label for="heard">How did you hear about us?</label>
+              <select id="heard">
+                <option value="">Choose if you like</option>
+                <option>Referral from a farm</option>
+                <option>Harvest brochure</option>
+                <option>Web search</option>
+                <option>Returning client</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="notes">Notes</label>
+              <textarea id="notes" rows="4" maxlength="2000"></textarea>
+            </div>
+            <div class="hp" aria-hidden="true">
+              <label for="company-website">Company website</label>
+              <input id="company-website" name="_honey" type="text" tabindex="-1" autocomplete="off">
+            </div>
+            <p class="hint">Sent to the UnScramble team. We use this only to respond to your request.</p>
+            <div class="form-error" role="alert" hidden></div>
+            <div class="step-actions">
+              <button class="btn btn-line" type="button" data-back>Back</button>
+              <button class="btn btn-gold" type="submit">Send request</button>
+            </div>
+          </div>
+        </form>
+        <div class="thanks" hidden>
+          <p class="kicker">Thank you</p>
+          <h2>Request received.</h2>
+          <p>We have the details and will be in touch. If the crew is needed sooner, call <a href="tel:+19022004888">+1 (902) 200-4888</a>.</p>
+          <div class="btn-row">
+            <a class="btn btn-line" href="index.html">Back to home</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <img class="footer__logo" src="assets/brand/unscramble-logo-reversed.svg" width="420" height="154" alt="">
+      <div class="footer__grid">
+        <div>
+          <h2>The HR Company</h2>
+          <p>Cultivating talent. Harvesting success.</p>
+        </div>
+        <div>
+          <h2>Talk to us</h2>
+          <ul>
+            <li><a href="tel:+19022004888">+1 (902) 200-4888</a></li>
+            <li><a href="tel:+17056500024">+1 (705) 650-0024</a></li>
+            <li><a href="mailto:admin@unscramble.ca">admin@unscramble.ca</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>On this site</h2>
+          <ul>
+            <li><a href="request-labour.html">Request Labour</a></li>
+            <li><a href="apply.html">Find Work</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="legal">Copyright © 2026 UnScramble The HR Company Inc. All rights reserved. 209 Queen St, 2nd Floor, Charlottetown, PE C1A 4B7.</p>
+    </div>
+  </footer>
+  <script src="assets/js/forms-config.js"></script>
+  <script src="assets/js/site.js"></script>
+</body>
+</html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Find Work — UnScramble</title>
+  <meta name="description" content="Apply for harvest work with UnScramble on Prince Edward Island. Roles, start date, licences, and a resume.">
+  <link rel="canonical" href="https://www.unscramble.ca/apply.html">
+  <meta name="theme-color" content="#332E57">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Unscramble">
+  <meta property="og:title" content="Find Work — UnScramble">
+  <meta property="og:description" content="Apply for harvest work with UnScramble on Prince Edward Island. Roles, start date, licences, and a resume.">
+  <meta property="og:url" content="https://www.unscramble.ca/apply.html">
+  <meta property="og:image" content="https://www.unscramble.ca/assets/images/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="en_CA">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Find Work — UnScramble">
+  <meta name="twitter:description" content="Apply for harvest work with UnScramble on Prince Edward Island. Roles, start date, licences, and a resume.">
+  <meta name="twitter:image" content="https://www.unscramble.ca/assets/images/og-image.jpg">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/brand/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/brand/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="preload" href="assets/fonts/source-serif-4-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/dm-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap header__bar">
+      <a class="brand" href="index.html">
+        <img src="assets/brand/unscramble-logo.svg" width="420" height="154" alt="UnScramble, The HR Company">
+      </a>
+      <nav class="nav-main" id="site-nav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html#how">How it works</a></li>
+          <li><a href="index.html#roles">Roles</a></li>
+          <li><a href="index.html#why">Why UnScramble</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header__actions">
+        <a class="btn btn-gold" href="request-labour.html">Request Labour</a>
+        <a class="btn btn-line" href="apply.html" aria-current="page">Find Work</a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+          <span class="nav-toggle__bars" aria-hidden="true"></span>
+          <span class="visually-hidden">Menu</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="section">
+    <div class="wrap form-layout">
+      <header class="form-intro">
+        <p class="kicker">For candidates</p>
+        <h1>Find work</h1>
+        <p class="lede">Harvest, packhouse, and washdown work across Prince Edward Island, July through November. Tell us how to reach you and which roles you want.</p>
+        <p class="note">Questions first? Call <a href="tel:+19022004888">+1 (902) 200-4888</a> or email <a href="mailto:admin@unscramble.ca">admin@unscramble.ca</a>.</p>
+        <noscript>
+          <p class="noscript">This form needs JavaScript. Call <a href="tel:+19022004888">+1 (902) 200-4888</a> or email <a href="mailto:admin@unscramble.ca">admin@unscramble.ca</a>.</p>
+        </noscript>
+      </header>
+
+      <div class="form-card">
+        <!-- Recipients live only in assets/js/forms-config.js -->
+        <form data-form="apply" method="post" action="#" novalidate>
+          <ol class="progress" aria-label="Form progress">
+            <li><button type="button" data-goto="0">About you</button></li>
+            <li><button type="button" data-goto="1">The work</button></li>
+          </ol>
+          <div class="progress__track" aria-hidden="true"><span></span></div>
+
+          <div class="step" data-step="about">
+            <h2>About you</h2>
+            <p class="step-lead">A name, a phone, and where you live.</p>
+            <div class="field">
+              <label for="full-name">Full name</label>
+              <input id="full-name" type="text" autocomplete="name" maxlength="120">
+              <p class="field-error" id="full-name-error" hidden></p>
+            </div>
+            <div class="grid-2">
+              <div class="field">
+                <label for="phone">Phone</label>
+                <input id="phone" type="tel" autocomplete="tel" inputmode="tel" maxlength="30">
+                <p class="field-error" id="phone-error" hidden></p>
+              </div>
+              <div class="field">
+                <label for="email">Email</label>
+                <input id="email" type="email" autocomplete="email" inputmode="email" maxlength="254">
+                <p class="field-error" id="email-error" hidden></p>
+              </div>
+            </div>
+            <div class="field">
+              <label for="town">Town or community</label>
+              <input id="town" type="text" autocomplete="address-level2" maxlength="120">
+              <p class="field-error" id="town-error" hidden></p>
+            </div>
+            <div class="step-actions">
+              <button class="btn btn-line" type="button" data-back hidden>Back</button>
+              <button class="btn btn-gold" type="button" data-next>Continue</button>
+            </div>
+          </div>
+
+          <div class="step" data-step="work" hidden>
+            <h2>The work</h2>
+            <p class="step-lead">Choose every role you want. Then add a start date and a resume.</p>
+            <fieldset id="roles" tabindex="-1">
+              <legend>Roles wanted</legend>
+              <div class="roles-pick">
+                <label class="check"><input type="checkbox" name="role" value="Graders"> <span>Graders</span></label>
+                <label class="check"><input type="checkbox" name="role" value="Packers"> <span>Packers</span></label>
+                <label class="check"><input type="checkbox" name="role" value="Truck drivers"> <span>Truck drivers</span></label>
+                <label class="check"><input type="checkbox" name="role" value="Forklift and machinery"> <span>Forklift &amp; machinery</span></label>
+                <label class="check"><input type="checkbox" name="role" value="Pressure washers"> <span>Pressure washers</span></label>
+                <label class="check"><input type="checkbox" name="role" value="Cleaners"> <span>Cleaners</span></label>
+                <label class="check"><input type="checkbox" name="role" value="Field labour"> <span>Field labour</span></label>
+                <label class="check"><input type="checkbox" name="role" value="Shift supervisors"> <span>Shift supervisors</span></label>
+              </div>
+              <p class="field-error" id="roles-error" hidden></p>
+            </fieldset>
+            <div class="field">
+              <label for="available-date">Available start date</label>
+              <input id="available-date" type="date">
+              <p class="field-error" id="available-date-error" hidden></p>
+            </div>
+            <fieldset>
+              <legend>Licences you hold</legend>
+              <div class="choices">
+                <label class="choice"><input id="app-az" type="checkbox"> <span>AZ</span></label>
+                <label class="choice"><input id="app-dz" type="checkbox"> <span>DZ</span></label>
+                <label class="choice"><input id="app-forklift" type="checkbox"> <span>Forklift</span></label>
+              </div>
+              <p class="hint">Leave these clear if you have none of them.</p>
+            </fieldset>
+            <fieldset id="transport" tabindex="-1">
+              <legend>Do you have your own transport?</legend>
+              <div class="choices">
+                <label class="choice"><input type="radio" name="Own transport" value="Yes"> <span>Yes</span></label>
+                <label class="choice"><input type="radio" name="Own transport" value="No"> <span>No</span></label>
+              </div>
+              <p class="field-error" id="transport-error" hidden></p>
+            </fieldset>
+            <div class="field">
+              <label for="resume">Resume</label>
+              <input id="resume" type="file" accept=".pdf,.doc,.docx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document">
+              <p class="hint" id="resume-hint">PDF or Word, up to 10 MB.</p>
+              <p class="file-name" id="file-name"></p>
+              <p class="field-error" id="resume-error" hidden></p>
+            </div>
+            <div class="hp" aria-hidden="true">
+              <label for="company-website">Company website</label>
+              <input id="company-website" name="_honey" type="text" tabindex="-1" autocomplete="off">
+            </div>
+            <p class="hint">Sent to the UnScramble team. We use this only to consider you for a crew.</p>
+            <div class="form-error" role="alert" hidden></div>
+            <div class="step-actions">
+              <button class="btn btn-line" type="button" data-back>Back</button>
+              <button class="btn btn-gold" type="submit">Submit application</button>
+            </div>
+          </div>
+        </form>
+        <div class="thanks" hidden>
+          <p class="kicker">Thank you</p>
+          <h2>Application received.</h2>
+          <p>If a crew is forming that fits your roles and start date, we will call or email you.</p>
+          <div class="btn-row">
+            <a class="btn btn-line" href="index.html">Back to home</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <img class="footer__logo" src="assets/brand/unscramble-logo-reversed.svg" width="420" height="154" alt="">
+      <div class="footer__grid">
+        <div>
+          <h2>The HR Company</h2>
+          <p>Cultivating talent. Harvesting success.</p>
+        </div>
+        <div>
+          <h2>Talk to us</h2>
+          <ul>
+            <li><a href="tel:+19022004888">+1 (902) 200-4888</a></li>
+            <li><a href="mailto:admin@unscramble.ca">admin@unscramble.ca</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>On this site</h2>
+          <ul>
+            <li><a href="request-labour.html">Request Labour</a></li>
+            <li><a href="apply.html">Find Work</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="legal">Copyright © 2026 UnScramble The HR Company Inc. All rights reserved. 209 Queen St, 2nd Floor, Charlottetown, PE C1A 4B7.</p>
+    </div>
+  </footer>
+  <script src="assets/js/forms-config.js"></script>
+  <script src="assets/js/site.js"></script>
+</body>
+</html>
