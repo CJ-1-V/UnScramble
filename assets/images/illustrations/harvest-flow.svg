@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 320" fill="none">
+  <style>
+    .draw { stroke-dasharray: 1; stroke-dashoffset: 0; }
+    @media (prefers-reduced-motion: no-preference) {
+      .draw { stroke-dashoffset: 1; animation: draw 1.6s ease forwards; }
+      .sun { transform-box: fill-box; transform-origin: center; animation: bob 6.5s ease-in-out infinite; }
+    }
+    @keyframes draw { to { stroke-dashoffset: 0; } }
+    @keyframes bob { 50% { transform: translateY(-5px); } }
+  </style>
+  <rect x="16" y="28" width="184" height="210" rx="16" fill="#F4F2F8" stroke="#332E57" stroke-width="1.75"/>
+  <rect x="248" y="28" width="184" height="210" rx="16" fill="#F4F2F8" stroke="#332E57" stroke-width="1.75"/>
+  <rect x="480" y="28" width="184" height="210" rx="16" fill="#F4F2F8" stroke="#332E57" stroke-width="1.75"/>
+  <g class="sun">
+    <circle cx="158" cy="78" r="16" fill="#D9A03C"/>
+  </g>
+  <path d="M48 168c28-18 48-18 70 0s42 18 70 0" stroke="#332E57" stroke-width="1.75" stroke-linecap="round"/>
+  <path d="M48 188c28-16 48-16 70 0s42 16 70 0" stroke="#332E57" stroke-width="1.75" stroke-linecap="round"/>
+  <path d="M78 150c0-16 8-18 8-30M108 150c0-22 0-24 0-36M138 150c0-16-8-18-8-30" stroke="#332E57" stroke-width="1.75" stroke-linecap="round"/>
+  <circle cx="86" cy="116" r="3" fill="#D9A03C"/>
+  <circle cx="108" cy="108" r="3" fill="#D9A03C"/>
+  <circle cx="130" cy="116" r="3" fill="#D9A03C"/>
+  <circle cx="312" cy="92" r="12" stroke="#332E57" stroke-width="1.75"/>
+  <path d="M292 168c2-18 8-26 20-26s18 8 20 26" stroke="#332E57" stroke-width="1.75" stroke-linecap="round"/>
+  <circle cx="368" cy="98" r="12" stroke="#D9A03C" stroke-width="1.75"/>
+  <path d="M350 168c2-16 7-24 18-24s16 8 18 24" stroke="#D9A03C" stroke-width="1.75" stroke-linecap="round"/>
+  <path d="M318 176h44l-4 28h-36l-4-28z" stroke="#332E57" stroke-width="1.75" stroke-linejoin="round"/>
+  <path d="M340 176v28" stroke="#D9A03C" stroke-width="1.75"/>
+  <path d="M512 150h120v56H512z" stroke="#332E57" stroke-width="1.75"/>
+  <path d="M500 150h144" stroke="#332E57" stroke-width="1.75" stroke-linecap="round"/>
+  <path d="M556 150v-28h32v28" stroke="#332E57" stroke-width="1.75" stroke-linejoin="round"/>
+  <path d="M528 206h28v-22h-28zM564 206h28v-28h-28zM600 206h20v-16h-20z" stroke="#D9A03C" stroke-width="1.75" stroke-linejoin="round"/>
+  <path class="draw" pathLength="1" d="M200 130h48" stroke="#D9A03C" stroke-width="2" stroke-linecap="round"/>
+  <path d="M240 124l8 6-8 6" stroke="#D9A03C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path class="draw" pathLength="1" d="M432 130h48" stroke="#D9A03C" stroke-width="2" stroke-linecap="round"/>
+  <path d="M472 124l8 6-8 6" stroke="#D9A03C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="108" y="278" text-anchor="middle" fill="#332E57" font-family="DM Sans, Segoe UI, Helvetica, Arial, sans-serif" font-size="18" font-weight="650">Field</text>
+  <text x="340" y="278" text-anchor="middle" fill="#332E57" font-family="DM Sans, Segoe UI, Helvetica, Arial, sans-serif" font-size="18" font-weight="650">Crew</text>
+  <text x="572" y="278" text-anchor="middle" fill="#332E57" font-family="DM Sans, Segoe UI, Helvetica, Arial, sans-serif" font-size="18" font-weight="650">Packhouse</text>
+</svg>

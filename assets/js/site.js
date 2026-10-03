@@ -530,6 +530,71 @@
     paint();
   }
 
+  function initMotion() {
+    var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reduce || !("IntersectionObserver" in window)) return;
+    document.documentElement.classList.add("motion");
+
+    function countUp(el) {
+      var target = Number(el.getAttribute("data-count"));
+      var suffix = el.getAttribute("data-suffix") || "";
+      if (!isFinite(target)) return;
+      var start = performance.now();
+      var duration = 900;
+      function tick(now) {
+        var t = Math.min(1, (now - start) / duration);
+        var eased = 1 - Math.pow(1 - t, 3);
+        el.textContent = Math.round(target * eased) + suffix;
+        if (t < 1) requestAnimationFrame(tick);
+        else el.textContent = String(target) + suffix;
+      }
+      requestAnimationFrame(tick);
+    }
+
+    var reveals = qsa("[data-reveal]");
+    var counters = qsa("[data-count]");
+    var seen = [];
+
+    function inView(el) {
+      var rect = el.getBoundingClientRect();
+      return rect.top < window.innerHeight * 0.92 && rect.bottom > 0;
+    }
+
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("is-in");
+        observer.unobserve(entry.target);
+        qsa("[data-count]", entry.target).forEach(function (el) {
+          if (seen.indexOf(el) !== -1) return;
+          seen.push(el);
+          countUp(el);
+        });
+        if (entry.target.hasAttribute("data-count") && seen.indexOf(entry.target) === -1) {
+          seen.push(entry.target);
+          countUp(entry.target);
+        }
+      });
+    }, { threshold: 0.28, rootMargin: "0px 0px -8% 0px" });
+
+    reveals.forEach(function (el) {
+      if (inView(el)) el.classList.add("is-in");
+      else {
+        el.classList.add("reveal");
+        observer.observe(el);
+      }
+    });
+
+    counters.forEach(function (el) {
+      var host = el.closest("[data-reveal]") || el;
+      if (inView(host)) {
+        seen.push(el);
+        countUp(el);
+      }
+    });
+  }
+
   initNav();
+  initMotion();
   qsa("form[data-form]").forEach(initForm);
 })();

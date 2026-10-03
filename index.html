@@ -27,7 +27,6 @@
   <link rel="manifest" href="site.webmanifest">
   <link rel="preload" href="assets/fonts/source-serif-4-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/dm-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="assets/images/about/img-4.webp" as="image" type="image/webp" fetchpriority="high">
   <link rel="stylesheet" href="assets/css/site.css">
   <script type="application/ld+json">
   {
@@ -83,7 +82,7 @@
   </header>
 
   <main id="main">
-    <section class="hero">
+    <section class="hero" data-reveal>
       <div class="wrap hero__grid">
         <div>
           <p class="kicker">Harvest 2026</p>
@@ -95,6 +94,11 @@
           </div>
           <p class="proof">$5 million liability insurance, with you named as additional insured. Schedules follow PEI employment standards. No payroll admin on your side.</p>
         </div>
+        <figure class="hero-art">
+          <img src="assets/images/illustrations/harvest-flow.svg" width="680" height="320" alt="From the field, to a screened crew, to the packhouse.">
+        </figure>
+      </div>
+      <div class="wrap">
         <aside class="brief">
           <p class="kicker">Call or send four things</p>
           <ol>
@@ -108,46 +112,53 @@
       </div>
     </section>
 
-    <section class="stats" aria-label="Our track record">
+    <section class="stats" aria-label="Our track record" data-reveal>
       <div class="wrap">
         <p class="stats__kicker">Our track record</p>
         <div class="stats__grid">
           <div>
-            <p class="stats__num">78%</p>
+            <img class="stats__icon" src="assets/images/illustrations/stat-clients.svg" alt="" width="40" height="40">
+            <p class="stats__num" data-count="78" data-suffix="%">78%</p>
             <p class="stats__label">Recurring clients</p>
           </div>
           <div>
-            <p class="stats__num">79+</p>
+            <img class="stats__icon" src="assets/images/illustrations/stat-projects.svg" alt="" width="40" height="40">
+            <p class="stats__num" data-count="79" data-suffix="+">79+</p>
             <p class="stats__label">Projects completed</p>
           </div>
           <div>
-            <p class="stats__num">58+</p>
+            <img class="stats__icon" src="assets/images/illustrations/stat-partners.svg" alt="" width="40" height="40">
+            <p class="stats__num" data-count="58" data-suffix="+">58+</p>
             <p class="stats__label">Partnered companies</p>
           </div>
           <div>
-            <p class="stats__num">200K+</p>
+            <img class="stats__icon" src="assets/images/illustrations/stat-hours.svg" alt="" width="40" height="40">
+            <p class="stats__num" data-count="200" data-suffix="K+">200K+</p>
             <p class="stats__label">Hours of service</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section" id="how">
+    <section class="section" id="how" data-reveal>
       <div class="wrap">
         <p class="kicker">How it works</p>
         <h2>Three steps. Then they start.</h2>
         <ol class="steps">
           <li>
+            <img class="glyph" src="assets/images/illustrations/step-call.svg" alt="" width="48" height="48">
             <span>01</span>
             <h3>You call or send the form</h3>
             <p>Give us the start date, the roles, and the headcount.</p>
           </li>
           <li>
+            <img class="glyph" src="assets/images/illustrations/step-crew.svg" alt="" width="48" height="48">
             <span>02</span>
             <h3>We crew up</h3>
             <p>Screened, trained workers are assigned, onboarded, and scheduled.</p>
           </li>
           <li>
+            <img class="glyph" src="assets/images/illustrations/step-start.svg" alt="" width="48" height="48">
             <span>03</span>
             <h3>They start</h3>
             <p>We run payroll, scheduling, WCB, and compliance.</p>
@@ -157,7 +168,7 @@
       </div>
     </section>
 
-    <section class="section mist" id="roles">
+    <section class="section mist" id="roles" data-reveal>
       <div class="wrap">
         <p class="kicker">Harvest, packhouse, washdown</p>
         <h2>The roles we staff.</h2>
@@ -170,32 +181,35 @@
           <li>Nov</li>
         </ol>
         <ul class="roles">
-          <li>Graders</li>
-          <li>Packers</li>
-          <li>Truck drivers</li>
-          <li>Forklift &amp; machinery</li>
-          <li>Pressure washers</li>
-          <li>Cleaners</li>
-          <li>Field labour</li>
-          <li>Shift supervisors</li>
+          <li><img class="glyph" src="assets/images/illustrations/role-grader.svg" alt="" width="48" height="48">Graders</li>
+          <li><img class="glyph" src="assets/images/illustrations/role-packer.svg" alt="" width="48" height="48">Packers</li>
+          <li><img class="glyph" src="assets/images/illustrations/role-driver.svg" alt="" width="48" height="48">Truck drivers</li>
+          <li><img class="glyph" src="assets/images/illustrations/role-forklift.svg" alt="" width="48" height="48">Forklift &amp; machinery</li>
+          <li><img class="glyph" src="assets/images/illustrations/role-washer.svg" alt="" width="48" height="48">Pressure washers</li>
+          <li><img class="glyph" src="assets/images/illustrations/role-cleaner.svg" alt="" width="48" height="48">Cleaners</li>
+          <li><img class="glyph" src="assets/images/illustrations/role-field.svg" alt="" width="48" height="48">Field labour</li>
+          <li><img class="glyph" src="assets/images/illustrations/role-supervisor.svg" alt="" width="48" height="48">Shift supervisors</li>
         </ul>
       </div>
     </section>
 
-    <section class="section" id="cover">
+    <section class="section" id="cover" data-reveal>
       <div class="wrap">
         <p class="kicker">What stays with us</p>
         <h2>You run the harvest. We run the employment.</h2>
         <ul class="promises">
           <li>
+            <img class="glyph" src="assets/images/illustrations/promise-shield.svg" alt="" width="48" height="48">
             <h3>$5 million liability</h3>
             <p>Insurance in place, and you named as additional insured.</p>
           </li>
           <li>
+            <img class="glyph" src="assets/images/illustrations/promise-standards.svg" alt="" width="48" height="48">
             <h3>PEI standards</h3>
             <p>Workers scheduled under Prince Edward Island employment standards.</p>
           </li>
           <li>
+            <img class="glyph" src="assets/images/illustrations/promise-payroll.svg" alt="" width="48" height="48">
             <h3>No payroll admin</h3>
             <p>We remit HST, CPP, EI, and tax. Same-day cover when someone does not show.</p>
           </li>
@@ -203,7 +217,7 @@
       </div>
     </section>
 
-    <section class="section" id="why">
+    <section class="section" id="why" data-reveal>
       <div class="wrap">
         <p class="kicker">Why farms call</p>
         <h2>Crews that move with the yield.</h2>
@@ -245,7 +259,7 @@
       </div>
     </section>
 
-    <section class="section" id="practice">
+    <section class="section" id="practice" data-reveal>
       <div class="wrap">
         <p class="kicker">The HR Company</p>
         <h2>Beyond the harvest line.</h2>
@@ -261,7 +275,7 @@
       </div>
     </section>
 
-    <section class="section band">
+    <section class="section mist" data-reveal>
       <div class="wrap split">
         <div>
           <p class="kicker">For farms</p>
@@ -282,7 +296,7 @@
       </div>
     </section>
 
-    <section class="section visit" id="visit">
+    <section class="section visit" id="visit" data-reveal>
       <div class="wrap">
         <p class="kicker">Charlottetown</p>
         <h2>The office</h2>
