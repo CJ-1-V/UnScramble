@@ -4,13 +4,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Request Labour — UnScramble</title>
-  <meta name="description" content="Tell UnScramble the start date, crew, and site. We supply screened harvest labour across Prince Edward Island.">
+  <meta name="description" content="Request a harvest crew, year-round staff, or a free HR consult from UnScramble in Prince Edward Island.">
   <link rel="canonical" href="https://www.unscramble.ca/request-labour.html">
   <meta name="theme-color" content="#332E57">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Unscramble">
   <meta property="og:title" content="Request Labour — UnScramble">
-  <meta property="og:description" content="Tell UnScramble the start date, crew, and site. We supply screened harvest labour across Prince Edward Island.">
+  <meta property="og:description" content="Request a harvest crew, year-round staff, or a free HR consult from UnScramble in Prince Edward Island.">
   <meta property="og:url" content="https://www.unscramble.ca/request-labour.html">
   <meta property="og:image" content="https://www.unscramble.ca/assets/images/og-image.jpg">
   <meta property="og:image:width" content="1200">
@@ -18,7 +18,7 @@
   <meta property="og:locale" content="en_CA">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Request Labour — UnScramble">
-  <meta name="twitter:description" content="Tell UnScramble the start date, crew, and site. We supply screened harvest labour across Prince Edward Island.">
+  <meta name="twitter:description" content="Request a harvest crew, year-round staff, or a free HR consult from UnScramble in Prince Edward Island.">
   <meta name="twitter:image" content="https://www.unscramble.ca/assets/images/og-image.jpg">
   <link rel="icon" href="favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/brand/favicon-32x32.png">
@@ -40,6 +40,8 @@
         <ul>
           <li><a href="index.html#how">How it works</a></li>
           <li><a href="index.html#roles">Roles</a></li>
+          <li><a href="staffing.html">Year-round</a></li>
+          <li><a href="hr-retainer.html">HR retainer</a></li>
           <li><a href="index.html#why">Why UnScramble</a></li>
           <li><a href="contact.html">Contact</a></li>
           <li class="nav-login"><a href="https://www.chiefjanitorial.com/shifts-secure/register/">Compliance &amp; Login</a></li>
@@ -60,9 +62,9 @@
   <main id="main">
     <header class="page-band" data-reveal>
       <div class="wrap">
-        <p class="kicker">For farms</p>
+        <p class="kicker">For businesses</p>
         <h1>Request labour</h1>
-        <p class="lede">Four things get a crew moving: start date, headcount, farm name, and site address. The rest of this form is the schedule and the site.</p>
+        <p class="lede">Harvest crews, year-round staff, or a free HR consult. Staffing requests continue into the schedule and the crew. A consult stops after your contact details.</p>
       </div>
     </header>
     <div class="section" data-reveal>
@@ -70,8 +72,8 @@
       <div class="form-intro">
         <ol>
           <li>We read the request.</li>
-          <li>We confirm the crew and the start.</li>
-          <li>Screened workers are scheduled. We run payroll.</li>
+          <li>We confirm the details with you.</li>
+          <li>Staffing is scheduled, or we book the HR consult.</li>
         </ol>
         <p class="note">Prefer the phone? <a href="tel:+19022004888">+1 (902) 200-4888</a></p>
         <noscript>
@@ -83,7 +85,7 @@
         <!-- Recipients live only in assets/js/forms-config.js -->
         <form data-form="labour" method="post" action="#" novalidate>
           <ol class="progress" aria-label="Form progress">
-            <li><button type="button" data-goto="0">Farm</button></li>
+            <li><button type="button" data-goto="0">Business</button></li>
             <li><button type="button" data-goto="1">Schedule</button></li>
             <li><button type="button" data-goto="2">Crew</button></li>
             <li><button type="button" data-goto="3">Site</button></li>
@@ -91,10 +93,30 @@
           <div class="progress__track" aria-hidden="true"><span></span></div>
 
           <div class="step" data-step="farm">
-            <h2>The farm</h2>
-            <p class="step-lead">Where should the crew report, and who do we call?</p>
+            <h2>The business</h2>
+            <p class="step-lead">Who should we call, and where should people report?</p>
             <div class="field">
-              <label for="farm-name">Farm name</label>
+              <label for="service-needed">Service needed</label>
+              <select id="service-needed">
+                <option value="">Choose one</option>
+                <option value="harvest">Harvest crew</option>
+                <option value="year-round">Year-round staffing</option>
+                <option value="consult">HR retainer or a free consult</option>
+              </select>
+              <p class="hint" id="consult-hint" hidden>An HR consult does not ask for a crew list. Continue after your contact details.</p>
+              <p class="field-error" id="service-needed-error" hidden></p>
+            </div>
+            <div class="field" id="retainer-wrap" hidden>
+              <label for="retainer-tier">Retainer interest</label>
+              <select id="retainer-tier">
+                <option value="">Not sure yet</option>
+                <option value="hiring">Hiring support</option>
+                <option value="operations">People operations</option>
+                <option value="retainer">Full retainer</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="farm-name">Business or farm name</label>
               <input id="farm-name" type="text" autocomplete="organization" maxlength="120">
               <p class="field-error" id="farm-name-error" hidden></p>
             </div>
@@ -333,6 +355,8 @@
         <div>
           <h2>On this site</h2>
           <ul>
+            <li><a href="staffing.html">Year-round staffing</a></li>
+            <li><a href="hr-retainer.html">HR retainer</a></li>
             <li><a href="request-labour.html">Request Labour</a></li>
             <li><a href="apply.html">Find Work</a></li>
             <li><a href="contact.html">Contact</a></li>
