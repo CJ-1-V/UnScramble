@@ -28,26 +28,39 @@
   <link rel="preload" href="assets/fonts/source-serif-4-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/dm-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="assets/css/site.css">
+  <link rel="stylesheet" href="assets/css/redesign.css">
 </head>
 <body>
+  <div class="scroll-progress" aria-hidden="true"><span></span></div>
   <a class="skip" href="#main">Skip to content</a>
   <header class="site-header">
+    <div class="utility">
+      <div class="wrap">
+        <a class="utility__phone" href="tel:+19022004888">+1 (902) 200-4888</a>
+        <a href="apply.html">Find Work</a>
+        <a href="https://www.chiefjanitorial.com/shifts-secure/register/">Compliance &amp; Login</a>
+      </div>
+    </div>
     <div class="wrap header__bar">
-      <a class="brand" href="index.html">
-        <img src="assets/brand/unscramble-logo.svg" width="420" height="154" alt="UnScramble, The HR Company">
+      <a class="brand" href="index.html" aria-label="UnScramble, The HR Company, home">
+        <img class="brand__mark" src="assets/brand/unscramble-icon.svg" width="64" height="64" alt="">
+        <span class="brand__rule" aria-hidden="true"></span>
+        <img class="brand__word" src="assets/brand/unscramble-logo.svg" width="420" height="154" alt="UnScramble, The HR Company">
       </a>
       <nav class="nav-main" id="site-nav" aria-label="Primary">
         <ul>
-          <li><a href="index.html#how">How it works</a></li>
-          <li><a href="index.html#roles">Roles</a></li>
-          <li><a href="index.html#why">Why UnScramble</a></li>
+          <li><a href="services.html">What we do</a></li>
+          <li><a href="industries.html">Industries</a></li>
+          <li><a href="compliance.html">Compliance &amp; safety</a></li>
+          <li><a href="workers.html">For workers</a></li>
+          <li><a href="about.html">About</a></li>
           <li><a href="contact.html">Contact</a></li>
           <li class="nav-login"><a href="https://www.chiefjanitorial.com/shifts-secure/register/">Compliance &amp; Login</a></li>
         </ul>
       </nav>
       <div class="header__actions">
-        <a class="btn btn-gold" href="request-labour.html" aria-current="page">Request Labour</a>
-        <a class="btn btn-line" href="apply.html">Find Work</a>
+        <a class="btn btn-gold" href="request-labour.html">Request Labour</a>
+        <a class="btn btn-line btn-find" href="apply.html">Find Work</a>
         <a class="btn btn-line btn-login" href="https://www.chiefjanitorial.com/shifts-secure/register/">Compliance &amp; Login</a>
         <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
           <span class="nav-toggle__bars" aria-hidden="true"></span>
@@ -56,7 +69,6 @@
       </div>
     </div>
   </header>
-
   <main id="main">
     <header class="page-band" data-reveal>
       <div class="wrap">
@@ -314,29 +326,51 @@
     </div>
   </main>
 
-  <footer class="site-footer">
+  <footer class="site-footer rd-footer">
     <div class="wrap">
-      <img class="footer__logo" src="assets/brand/unscramble-logo-reversed.svg" width="420" height="154" alt="">
+      <div class="footer__top">
+        <img class="footer__logo" src="assets/brand/unscramble-logo-reversed.svg" width="420" height="154" alt="UnScramble, The HR Company">
+        <div class="footer__follow">
+          <p class="footer__tag">Cultivating talent. Harvesting success.</p>
+          <p class="footer__follow-label">Follow UnScramble</p>
+          <ul class="social social--on-indigo" aria-label="UnScramble on social media"><li><a class="social__btn social__btn--facebook" href="https://www.facebook.com/61595247444794" target="_blank" rel="noopener" aria-label="UnScramble on Facebook (opens in a new tab)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M13.6 21v-7.6h2.6l.4-3h-3V8.5c0-.9.3-1.5 1.5-1.5h1.6V4.3c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.2H8v3h2.5V21z"/></svg></a></li><li><a class="social__btn social__btn--instagram" href="https://www.instagram.com/unscramble_hr/" target="_blank" rel="noopener" aria-label="UnScramble on Instagram (opens in a new tab)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3.75" y="3.75" width="16.5" height="16.5" rx="4.75" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="3.9" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.1" cy="6.9" r="1.15" fill="currentColor"/></svg></a></li></ul>
+        </div>
+      </div>
       <div class="footer__grid">
         <div>
-          <h2>The HR Company</h2>
-          <p>Cultivating talent. Harvesting success.</p>
+          <h2>What we do</h2>
+          <ul>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="services.html#how">How it works</a></li>
+            <li><a href="industries.html">Industries</a></li>
+            <li><a href="compliance.html">Compliance &amp; safety</a></li>
+            <li><a href="request-labour.html">Request Labour</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Workers</h2>
+          <ul>
+            <li><a href="workers.html">For workers</a></li>
+            <li><a href="apply.html">Find Work</a></li>
+            <li><a href="https://www.chiefjanitorial.com/shifts-secure/register/">Compliance &amp; Login</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Company</h2>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="https://www.google.com/maps/search/?api=1&amp;query=209+Queen+St+Charlottetown+PE+C1A+4B7">Map of the office</a></li>
+          </ul>
         </div>
         <div>
           <h2>Talk to us</h2>
           <ul>
             <li><a href="tel:+19022004888">+1 (902) 200-4888</a></li>
-            <li><a href="tel:+17056500024">+1 (705) 650-0024</a></li>
             <li><a href="mailto:admin@unscramble.ca">admin@unscramble.ca</a></li>
-          </ul>
-        </div>
-        <div>
-          <h2>On this site</h2>
-          <ul>
-            <li><a href="request-labour.html">Request Labour</a></li>
-            <li><a href="apply.html">Find Work</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="https://www.chiefjanitorial.com/shifts-secure/register/">Compliance &amp; Login</a></li>
+            <li><a href="mailto:support@unscramble.ca">support@unscramble.ca</a></li>
+            <li><address>209 Queen St, 2nd Floor<br>Charlottetown, PE C1A 4B7</address></li>
+            <li>Monday to Friday, 9:00 am – 5:00 pm</li>
           </ul>
         </div>
       </div>
@@ -345,5 +379,6 @@
   </footer>
   <script src="assets/js/forms-config.js"></script>
   <script src="assets/js/site.js"></script>
+  <script src="assets/js/redesign.js"></script>
 </body>
 </html>
