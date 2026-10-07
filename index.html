@@ -28,6 +28,7 @@
   <link rel="preload" href="assets/fonts/source-serif-4-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/dm-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="assets/css/site.css">
+  <link rel="stylesheet" href="assets/css/redesign.css">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -55,25 +56,37 @@
   }
   </script>
 </head>
-<body>
+<body data-home>
+  <div class="scroll-progress" aria-hidden="true"><span></span></div>
   <a class="skip" href="#main">Skip to content</a>
   <header class="site-header">
+    <div class="utility">
+      <div class="wrap">
+        <a class="utility__phone" href="tel:+19022004888">+1 (902) 200-4888</a>
+        <a href="apply.html">Find Work</a>
+        <a href="https://www.chiefjanitorial.com/shifts-secure/register/">Compliance &amp; Login</a>
+      </div>
+    </div>
     <div class="wrap header__bar">
-      <a class="brand" href="index.html">
-        <img src="assets/brand/unscramble-logo.svg" width="420" height="154" alt="UnScramble, The HR Company">
+      <a class="brand" href="index.html" aria-label="UnScramble, The HR Company, home">
+        <img class="brand__mark" src="assets/brand/unscramble-icon.svg" width="64" height="64" alt="">
+        <span class="brand__rule" aria-hidden="true"></span>
+        <img class="brand__word" src="assets/brand/unscramble-logo.svg" width="420" height="154" alt="UnScramble, The HR Company">
       </a>
       <nav class="nav-main" id="site-nav" aria-label="Primary">
         <ul>
-          <li><a href="index.html#how">How it works</a></li>
-          <li><a href="index.html#roles">Roles</a></li>
-          <li><a href="index.html#why">Why UnScramble</a></li>
+          <li><a href="services.html">What we do</a></li>
+          <li><a href="industries.html">Industries</a></li>
+          <li><a href="compliance.html">Compliance &amp; safety</a></li>
+          <li><a href="workers.html">For workers</a></li>
+          <li><a href="about.html">About</a></li>
           <li><a href="contact.html">Contact</a></li>
           <li class="nav-login"><a href="https://www.chiefjanitorial.com/shifts-secure/register/">Compliance &amp; Login</a></li>
         </ul>
       </nav>
       <div class="header__actions">
         <a class="btn btn-gold" href="request-labour.html">Request Labour</a>
-        <a class="btn btn-line" href="apply.html">Find Work</a>
+        <a class="btn btn-line btn-find" href="apply.html">Find Work</a>
         <a class="btn btn-line btn-login" href="https://www.chiefjanitorial.com/shifts-secure/register/">Compliance &amp; Login</a>
         <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
           <span class="nav-toggle__bars" aria-hidden="true"></span>
@@ -82,273 +95,223 @@
       </div>
     </div>
   </header>
-
   <main id="main">
-    <section class="hero" data-reveal>
-      <div class="wrap hero__grid">
+    <section class="rd-hero">
+      <svg class="rd-hero__lines" viewBox="0 0 1600 760" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false"><path d="M-50 40 C 300 -20, 600 120, 900 30 S 1400 -30, 1700 60"/><path d="M-50 76 C 300 16, 600 156, 900 66 S 1400 6, 1700 96"/><path d="M-50 112 C 300 52, 600 192, 900 102 S 1400 42, 1700 132"/><path d="M-50 148 C 300 88, 600 228, 900 138 S 1400 78, 1700 168"/><path d="M-50 184 C 300 124, 600 264, 900 174 S 1400 114, 1700 204"/><path d="M-50 220 C 300 160, 600 300, 900 210 S 1400 150, 1700 240"/><path d="M-50 256 C 300 196, 600 336, 900 246 S 1400 186, 1700 276"/><path d="M-50 292 C 300 232, 600 372, 900 282 S 1400 222, 1700 312"/><path d="M-50 328 C 300 268, 600 408, 900 318 S 1400 258, 1700 348"/><path d="M-50 364 C 300 304, 600 444, 900 354 S 1400 294, 1700 384"/><path d="M-50 400 C 300 340, 600 480, 900 390 S 1400 330, 1700 420"/><path d="M-50 436 C 300 376, 600 516, 900 426 S 1400 366, 1700 456"/><path d="M-50 472 C 300 412, 600 552, 900 462 S 1400 402, 1700 492"/><path d="M-50 508 C 300 448, 600 588, 900 498 S 1400 438, 1700 528"/><path d="M-50 544 C 300 484, 600 624, 900 534 S 1400 474, 1700 564"/><path d="M-50 580 C 300 520, 600 660, 900 570 S 1400 510, 1700 600"/><path d="M-50 616 C 300 556, 600 696, 900 606 S 1400 546, 1700 636"/><path d="M-50 652 C 300 592, 600 732, 900 642 S 1400 582, 1700 672"/><path d="M-50 688 C 300 628, 600 768, 900 678 S 1400 618, 1700 708"/><path d="M-50 724 C 300 664, 600 804, 900 714 S 1400 654, 1700 744"/></svg>
+      <div class="wrap rd-hero__grid">
         <div>
           <p class="kicker">Harvest 2026</p>
-          <h1>Harvest does not wait for hiring.</h1>
+          <h1 data-split>Harvest does not wait for hiring.</h1>
           <p class="lede">We supply trained, screened harvest crews across Prince Edward Island — often within days of your call. Graders, packers, drivers, and washdown crews for the July to November peak.</p>
           <div class="btn-row">
             <a class="btn btn-gold" href="request-labour.html">Request Labour</a>
-            <a class="btn btn-line" href="apply.html">Find Work</a>
+            <a class="btn btn-ghost" href="apply.html">Find Work</a>
           </div>
           <p class="proof">$5 million liability insurance, with you named as additional insured. Schedules follow PEI employment standards. No payroll admin on your side.</p>
+          <a class="rd-hero__cue" href="#explore">Explore</a>
         </div>
-        <figure class="hero-art">
+        <figure class="rd-hero__art">
           <img src="assets/images/illustrations/harvest-flow.svg" width="680" height="320" alt="From the field, to a screened crew, to the packhouse.">
         </figure>
       </div>
+    </section>
+
+    <section class="section" id="explore" data-reveal>
       <div class="wrap">
-        <aside class="brief">
-          <p class="kicker">Call or send four things</p>
-          <ol>
-            <li><span>01</span> Start date</li>
-            <li><span>02</span> Crew and headcount</li>
-            <li><span>03</span> Farm name</li>
-            <li><span>04</span> Site address</li>
-          </ol>
-          <a class="brief__phone" href="tel:+19022004888">+1 (902) 200-4888</a>
-        </aside>
+        <div class="rd-head">
+          <div>
+            <p class="kicker">The HR Company</p>
+            <h2 class="display">Crews that move with the yield.</h2>
+          </div>
+          <p class="lede">From agriculture to other workplaces, UnScramble supports hiring, compliance, and the day-to-day of employing people across Canada. The seasonal crew is where most farms meet us.</p>
+        </div>
+        <ul class="cards" data-stagger>
+          <li><a class="card" href="services.html"><span class="card__num">01</span><h3>What we do</h3><p>Three steps from your call to a crew on site. We run payroll, scheduling, WCB, and compliance.</p><span class="card__more">How it works</span></a></li>
+          <li><a class="card" href="industries.html"><span class="card__num">02</span><h3>Industries</h3><p>Harvest, packhouse, and washdown first. Year-round crews for other Island businesses too.</p><span class="card__more">See industries</span></a></li>
+          <li><a class="card" href="compliance.html"><span class="card__num">03</span><h3>Compliance &amp; safety</h3><p>Labour rules, insurance, and safety training completed through the UnScramble worker app.</p><span class="card__more">How we handle it</span></a></li>
+          <li><a class="card" href="workers.html"><span class="card__num">04</span><h3>For workers</h3><p>Harvest, packhouse, and washdown work across Prince Edward Island, July through November.</p><span class="card__more">Find work</span></a></li>
+        </ul>
       </div>
     </section>
 
-    <section class="stats" aria-label="Our track record" data-reveal>
+    <section class="section mist" id="flow" data-reveal>
+      <div class="wrap">
+        <div class="rd-head">
+          <div>
+            <p class="kicker">How it works</p>
+            <h2 class="display">From your order to the timesheet.</h2>
+          </div>
+          <p class="lede">You order the crew. The office confirms, the crew clocks in through the app, and the hours come to you with the timesheets online.</p>
+        </div>
+        <figure class="ig ig-flow" style="--n:4">
+          <ol class="ig-flow__list">
+            <li class="ig-flow__step" style="--i:0">
+              <span class="ig-flow__icon"><svg class="ig-ico" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><rect x="15" y="7" width="18" height="34" rx="3"/><path d="M21 35h6"/><path class="g" d="M20 15h8M20 20h8M20 25h5"/></svg></span>
+              <span class="ig-flow__num">01</span>
+              <h3>Farm orders a crew</h3>
+              <p>Call or send the form: start date, crew and headcount, farm name, and site address.</p>
+            </li>
+            <li class="ig-flow__step" style="--i:1">
+              <span class="ig-flow__icon"><svg class="ig-ico" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><circle cx="22" cy="22" r="13"/><path d="M22 14v8l5 3"/><path class="g" d="M31 36l3.5 3.5L42 32"/></svg></span>
+              <span class="ig-flow__num">02</span>
+              <h3>Office confirms by 9 PM</h3>
+              <p>The UnScramble office confirms your crew by 9 PM.</p>
+            </li>
+            <li class="ig-flow__step" style="--i:2">
+              <span class="ig-flow__icon"><svg class="ig-ico" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><rect x="10" y="7" width="18" height="34" rx="3"/><path d="M16 35h6"/><circle class="g" cx="33" cy="20" r="7"/><path class="g" d="M30 20l2.2 2.2L36.5 18"/></svg></span>
+              <span class="ig-flow__num">03</span>
+              <h3>Crew arrives &amp; clocks in via app</h3>
+              <p>Workers clock in on site through the UnScramble worker app.</p>
+            </li>
+            <li class="ig-flow__step" style="--i:3">
+              <span class="ig-flow__icon"><svg class="ig-ico" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><path d="M13 7h15l8 8v26H13z"/><path d="M28 7v8h8"/><path class="g" d="M18 23h13M18 28h13M18 33h8"/></svg></span>
+              <span class="ig-flow__num">04</span>
+              <h3>Hours billed, timesheets online</h3>
+              <p>Hours are billed to you, with timesheets online.</p>
+            </li>
+          </ol>
+          <figcaption class="ig-caption visually-hidden">How it works, in four steps: the farm orders a crew, the office confirms by 9 PM, the crew arrives and clocks in through the app, and hours are billed with timesheets online.</figcaption>
+        </figure>
+        <a class="text-link" href="request-labour.html">Request Labour</a>
+      </div>
+    </section>
+
+    <section class="stats stats--ig" aria-label="Our track record" data-reveal>
       <div class="wrap">
         <p class="stats__kicker">Our track record</p>
-        <div class="stats__grid">
-          <div>
-            <img class="stats__icon" src="assets/images/illustrations/stat-clients.svg" alt="" width="40" height="40">
-            <p class="stats__num" data-count="78" data-suffix="%">78%</p>
+        <div class="stats__grid ig-stats">
+          <div class="ig-stat">
+            <div class="ig-ring"><svg class="ig-ring__svg" viewBox="0 0 120 120" aria-hidden="true" focusable="false"><circle class="ig-ring__track" cx="60" cy="60" r="52" pathLength="100"/><circle class="ig-ring__arc" cx="60" cy="60" r="52" pathLength="100" style="--pct:73"/></svg><img class="stats__icon" src="assets/images/illustrations/stat-clients.svg" alt="" width="40" height="40"></div>
+            <p class="stats__num" data-count="73" data-suffix="%">73%</p>
             <p class="stats__label">Recurring clients</p>
           </div>
-          <div>
-            <img class="stats__icon" src="assets/images/illustrations/stat-projects.svg" alt="" width="40" height="40">
-            <p class="stats__num" data-count="79" data-suffix="+">79+</p>
+          <div class="ig-stat">
+            <div class="ig-badge"><svg class="ig-badge__ring" viewBox="0 0 120 120" aria-hidden="true" focusable="false"><circle cx="60" cy="60" r="52" pathLength="100"/></svg><img class="stats__icon" src="assets/images/illustrations/stat-projects.svg" alt="" width="40" height="40"></div>
+            <p class="stats__num" data-count="180" data-suffix="+">180+</p>
             <p class="stats__label">Projects completed</p>
           </div>
-          <div>
-            <img class="stats__icon" src="assets/images/illustrations/stat-partners.svg" alt="" width="40" height="40">
-            <p class="stats__num" data-count="58" data-suffix="+">58+</p>
+          <div class="ig-stat">
+            <div class="ig-badge"><svg class="ig-badge__ring" viewBox="0 0 120 120" aria-hidden="true" focusable="false"><circle cx="60" cy="60" r="52" pathLength="100"/></svg><img class="stats__icon" src="assets/images/illustrations/stat-partners.svg" alt="" width="40" height="40"></div>
+            <p class="stats__num" data-count="87" data-suffix="+">87+</p>
             <p class="stats__label">Partnered companies</p>
           </div>
-          <div>
-            <img class="stats__icon" src="assets/images/illustrations/stat-hours.svg" alt="" width="40" height="40">
-            <p class="stats__num" data-count="200" data-suffix="K+">200K+</p>
-            <p class="stats__label">Hours of service</p>
+          <div class="ig-stat">
+            <div class="ig-badge"><svg class="ig-badge__ring" viewBox="0 0 120 120" aria-hidden="true" focusable="false"><circle cx="60" cy="60" r="52" pathLength="100"/></svg><img class="stats__icon" src="assets/images/illustrations/stat-hours.svg" alt="" width="40" height="40"></div>
+            <p class="stats__num"><span class="stats__approx">Approx.</span> <span data-count="368" data-suffix="K">368K</span></p>
+            <p class="stats__label">Hours worked</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section" id="how" data-reveal>
-      <div class="wrap">
-        <p class="kicker">How it works</p>
-        <h2>Three steps. Then they start.</h2>
-        <ol class="steps">
-          <li>
-            <img class="glyph" src="assets/images/illustrations/step-call.svg" alt="" width="48" height="48">
-            <span>01</span>
-            <h3>You call or send the form</h3>
-            <p>Give us the start date, the roles, and the headcount.</p>
-          </li>
-          <li>
-            <img class="glyph" src="assets/images/illustrations/step-crew.svg" alt="" width="48" height="48">
-            <span>02</span>
-            <h3>We crew up</h3>
-            <p>Screened, trained workers are assigned, onboarded, and scheduled.</p>
-          </li>
-          <li>
-            <img class="glyph" src="assets/images/illustrations/step-start.svg" alt="" width="48" height="48">
-            <span>03</span>
-            <h3>They start</h3>
-            <p>We run payroll, scheduling, WCB, and compliance.</p>
-          </li>
-        </ol>
-        <p class="note">With us, a full crew is a matter of days. Hiring direct usually takes weeks. Screening, onboarding, and payroll are already done on our side. The only paperwork on yours is a short non-solicitation agreement.</p>
-      </div>
-    </section>
-
-    <section class="section mist" id="roles" data-reveal>
-      <div class="wrap">
-        <p class="kicker">Harvest, packhouse, washdown</p>
-        <h2>The roles we staff.</h2>
-        <p class="lede">Peak window, July through November. Book ahead.</p>
-        <ol class="months" aria-label="Peak harvest months">
-          <li>Jul</li>
-          <li>Aug</li>
-          <li>Sep</li>
-          <li>Oct</li>
-          <li>Nov</li>
-        </ol>
-        <ul class="roles">
-          <li><img class="glyph" src="assets/images/illustrations/role-grader.svg" alt="" width="48" height="48">Graders</li>
-          <li><img class="glyph" src="assets/images/illustrations/role-packer.svg" alt="" width="48" height="48">Packers</li>
-          <li><img class="glyph" src="assets/images/illustrations/role-driver.svg" alt="" width="48" height="48">Truck drivers</li>
-          <li><img class="glyph" src="assets/images/illustrations/role-forklift.svg" alt="" width="48" height="48">Forklift &amp; machinery</li>
-          <li><img class="glyph" src="assets/images/illustrations/role-washer.svg" alt="" width="48" height="48">Pressure washers</li>
-          <li><img class="glyph" src="assets/images/illustrations/role-cleaner.svg" alt="" width="48" height="48">Cleaners</li>
-          <li><img class="glyph" src="assets/images/illustrations/role-field.svg" alt="" width="48" height="48">Field labour</li>
-          <li><img class="glyph" src="assets/images/illustrations/role-supervisor.svg" alt="" width="48" height="48">Shift supervisors</li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="section" id="cover" data-reveal>
-      <div class="wrap">
-        <p class="kicker">What stays with us</p>
-        <h2>You run the harvest. We run the employment.</h2>
-        <ul class="promises">
-          <li>
-            <img class="glyph" src="assets/images/illustrations/promise-shield.svg" alt="" width="48" height="48">
-            <h3>$5 million liability</h3>
-            <p>Insurance in place, and you named as additional insured.</p>
-          </li>
-          <li>
-            <img class="glyph" src="assets/images/illustrations/promise-standards.svg" alt="" width="48" height="48">
-            <h3>PEI standards</h3>
-            <p>Workers scheduled under Prince Edward Island employment standards.</p>
-          </li>
-          <li>
-            <img class="glyph" src="assets/images/illustrations/promise-payroll.svg" alt="" width="48" height="48">
-            <h3>No payroll admin</h3>
-            <p>We remit HST, CPP, EI, and tax. Same-day cover when someone does not show, subject to availability.</p>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="section" id="why" data-reveal>
-      <div class="wrap">
-        <p class="kicker">Why farms call</p>
-        <h2>Crews that move with the yield.</h2>
-        <ul class="reasons">
-          <li>
-            <span>01</span>
-            <h3>Days, not weeks</h3>
-            <p>A crew can be on site within days of the call.</p>
-          </li>
-          <li>
-            <span>02</span>
-            <h3>Same-day replacement*</h3>
-            <p class="muted">Subject to crew availability.</p>
-            <p>No-shows are covered the same day when crews are available.</p>
-          </li>
-          <li>
-            <span>03</span>
-            <h3>Scale with the crop</h3>
-            <p>Headcount goes up or down with yield, without a hiring project.</p>
-          </li>
-        </ul>
-        <blockquote class="quote">
-          <p>Exceptional last-minute service. The skilled crew handled everything efficiently and professionally on short notice.</p>
-          <footer>Thys Polstra, Green Meadow Farms</footer>
-        </blockquote>
-        <ul class="more-quotes">
-          <li>
-            <p>Punctual and reliable. They arrive on time and handle the work quickly and efficiently, with no delays. Highly recommended.</p>
-            <cite>Blaine Diamond, Diamondale Farms</cite>
-          </li>
-          <li>
-            <p>Their workforce planning helped us tighten the team, close operational gaps, and improve efficiency.</p>
-            <cite>Alison Carver, Carver Farms</cite>
-          </li>
-          <li>
-            <p>Managing compliance and payroll was difficult until we partnered with UnScramble. Their support made it smooth and stress-free.</p>
-            <cite>Nishan, Manager at Jortani Farms</cite>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="section" id="practice" data-reveal>
-      <div class="wrap">
-        <p class="kicker">The HR Company</p>
-        <h2>Beyond the harvest line.</h2>
-        <p class="lede">From agriculture to other workplaces, UnScramble supports hiring, compliance, and the day-to-day of employing people across Canada. The seasonal crew is where most farms meet us.</p>
-        <ul class="services">
-          <li><strong>HR solutions</strong><span>Hiring, staffing, and workforce support.</span></li>
-          <li><strong>Compliance and safety</strong><span>Labour rules and the standards a site has to meet.</span></li>
-          <li><strong>Workforce strategy</strong><span>Planning the team around the season, not a blank org chart.</span></li>
-          <li><strong>Employee engagement</strong><span>Keeping people through the peak, and bringing them back.</span></li>
-          <li><strong>Training and development</strong><span>Practical preparation for the work in front of them.</span></li>
-          <li><strong>Payroll management</strong><span>Payroll, time, and scheduling handled on our side.</span></li>
-        </ul>
+    <section class="section" data-reveal>
+      <div class="wrap feature">
+        <div>
+          <p class="kicker">What stays with us</p>
+          <h2 class="display">You run the harvest. We run the employment.</h2>
+          <p class="lede">With us, a full crew is a matter of days. Hiring direct usually takes weeks. Screening, onboarding, and payroll are already done on our side.</p>
+          <a class="text-link" href="services.html">See how it works</a>
+        </div>
+        <div class="feature__aside">
+          <ul data-stagger>
+            <li><h3>Days, not weeks</h3><p>A crew can be on site within days of the call.</p></li>
+            <li><h3>Same-day replacement*</h3><p>No-shows are covered the same day when crews are available. <span class="muted">*Subject to crew availability.</span></p></li>
+            <li><h3>Scale with the crop</h3><p>Headcount goes up or down with yield, without a hiring project.</p></li>
+          </ul>
+        </div>
       </div>
     </section>
 
     <section class="section mist" data-reveal>
+      <div class="wrap">
+        <p class="kicker">Harvest, packhouse, washdown</p>
+        <h2>The roles we staff.</h2>
+        <p class="lede">Peak window, July through November. Book ahead.</p>
+        <ul class="chips" data-stagger>
+          <li><img src="assets/images/illustrations/role-grader.svg" alt="" width="30" height="30">Graders</li>
+          <li><img src="assets/images/illustrations/role-packer.svg" alt="" width="30" height="30">Packers</li>
+          <li><img src="assets/images/illustrations/role-driver.svg" alt="" width="30" height="30">Truck drivers</li>
+          <li><img src="assets/images/illustrations/role-forklift.svg" alt="" width="30" height="30">Forklift &amp; machinery</li>
+          <li><img src="assets/images/illustrations/role-washer.svg" alt="" width="30" height="30">Pressure washers</li>
+          <li><img src="assets/images/illustrations/role-cleaner.svg" alt="" width="30" height="30">Cleaners</li>
+          <li><img src="assets/images/illustrations/role-field.svg" alt="" width="30" height="30">Field labour</li>
+          <li><img src="assets/images/illustrations/role-supervisor.svg" alt="" width="30" height="30">Shift supervisors</li>
+        </ul>
+        <a class="text-link" href="industries.html">All industries we staff</a>
+      </div>
+    </section>
+
+    <section class="pull" data-reveal>
+      <div class="wrap">
+        <blockquote class="quote">
+          <p>Exceptional last-minute service. The skilled crew handled everything efficiently and professionally on short notice.</p>
+          <footer>Farm client, Prince Edward Island</footer>
+        </blockquote>
+      </div>
+    </section>
+
+    <section class="cta-band" data-reveal>
       <div class="wrap split">
         <div>
-          <p class="kicker">For farms</p>
+          <p class="kicker">For farms and businesses</p>
           <h2>Tell us what you need.</h2>
           <p class="lede">Start date, crew, farm name, and site address. We will build the rest of the schedule with you.</p>
-          <div class="btn-row">
-            <a class="btn btn-gold" href="request-labour.html">Request Labour</a>
-          </div>
+          <div class="btn-row"><a class="btn btn-gold" href="request-labour.html">Request Labour</a></div>
         </div>
         <div>
           <p class="kicker">For candidates</p>
           <h2>Find work this harvest.</h2>
           <p class="lede">Graders, packers, drivers, forklift, washdown, field labour, and shift supervisors across Prince Edward Island.</p>
-          <div class="btn-row">
-            <a class="btn btn-line" href="apply.html">Find Work</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section visit" id="visit" data-reveal>
-      <div class="wrap">
-        <p class="kicker">Charlottetown</p>
-        <h2>The office</h2>
-        <div class="visit__grid">
-          <div class="stack">
-            <p class="label">Visit</p>
-            <p>UnScramble The HR Company Inc.<br>209 Queen St, 2nd Floor<br>Charlottetown, PE C1A 4B7</p>
-            <p class="muted">Monday to Friday, 9:00 am – 5:00 pm</p>
-          </div>
-          <div class="stack">
-            <p class="label">Call</p>
-            <p><a href="tel:+19022004888">+1 (902) 200-4888</a></p>
-            <p><a href="tel:+17056500024">+1 (705) 650-0024</a></p>
-          </div>
-          <div class="stack">
-            <p class="label">Write</p>
-            <p><a href="mailto:admin@unscramble.ca">admin@unscramble.ca</a></p>
-            <p><a href="mailto:support@unscramble.ca">support@unscramble.ca</a></p>
-            <p><a href="https://www.google.com/maps/search/?api=1&amp;query=209+Queen+St+Charlottetown+PE+C1A+4B7">Map of the office</a></p>
-          </div>
+          <div class="btn-row"><a class="btn btn-line" href="apply.html">Find Work</a></div>
         </div>
       </div>
     </section>
   </main>
-
-  <footer class="site-footer">
+  <footer class="site-footer rd-footer">
     <div class="wrap">
-      <img class="footer__logo" src="assets/brand/unscramble-logo-reversed.svg" width="420" height="154" alt="">
+      <div class="footer__top">
+        <img class="footer__logo" src="assets/brand/unscramble-logo-reversed.svg" width="420" height="154" alt="UnScramble, The HR Company">
+        <div class="footer__follow">
+          <p class="footer__tag">Cultivating talent. Harvesting success.</p>
+          <p class="footer__follow-label">Follow UnScramble</p>
+          <ul class="social social--on-indigo" aria-label="UnScramble on social media"><li><a class="social__btn social__btn--facebook" href="https://www.facebook.com/61595247444794" target="_blank" rel="noopener" aria-label="UnScramble on Facebook (opens in a new tab)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M13.6 21v-7.6h2.6l.4-3h-3V8.5c0-.9.3-1.5 1.5-1.5h1.6V4.3c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.2H8v3h2.5V21z"/></svg></a></li><li><a class="social__btn social__btn--instagram" href="https://www.instagram.com/unscramble_hr/" target="_blank" rel="noopener" aria-label="UnScramble on Instagram (opens in a new tab)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3.75" y="3.75" width="16.5" height="16.5" rx="4.75" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="3.9" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.1" cy="6.9" r="1.15" fill="currentColor"/></svg></a></li></ul>
+        </div>
+      </div>
       <div class="footer__grid">
         <div>
-          <h2>The HR Company</h2>
-          <p>Cultivating talent. Harvesting success.</p>
+          <h2>What we do</h2>
+          <ul>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="services.html#how">How it works</a></li>
+            <li><a href="industries.html">Industries</a></li>
+            <li><a href="compliance.html">Compliance &amp; safety</a></li>
+            <li><a href="request-labour.html">Request Labour</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Workers</h2>
+          <ul>
+            <li><a href="workers.html">For workers</a></li>
+            <li><a href="apply.html">Find Work</a></li>
+            <li><a href="https://www.chiefjanitorial.com/shifts-secure/register/">Compliance &amp; Login</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Company</h2>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="https://www.google.com/maps/search/?api=1&amp;query=209+Queen+St+Charlottetown+PE+C1A+4B7">Map of the office</a></li>
+          </ul>
         </div>
         <div>
           <h2>Talk to us</h2>
           <ul>
             <li><a href="tel:+19022004888">+1 (902) 200-4888</a></li>
-            <li><a href="tel:+17056500024">+1 (705) 650-0024</a></li>
             <li><a href="mailto:admin@unscramble.ca">admin@unscramble.ca</a></li>
             <li><a href="mailto:support@unscramble.ca">support@unscramble.ca</a></li>
-          </ul>
-        </div>
-        <div>
-          <h2>On this site</h2>
-          <ul>
-            <li><a href="request-labour.html">Request Labour</a></li>
-            <li><a href="apply.html">Find Work</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="https://www.chiefjanitorial.com/shifts-secure/register/">Compliance &amp; Login</a></li>
+            <li><address>209 Queen St, 2nd Floor<br>Charlottetown, PE C1A 4B7</address></li>
+            <li>Monday to Friday, 9:00 am – 5:00 pm</li>
           </ul>
         </div>
       </div>
@@ -356,5 +319,6 @@
     </div>
   </footer>
   <script src="assets/js/site.js"></script>
+  <script src="assets/js/redesign.js"></script>
 </body>
 </html>
