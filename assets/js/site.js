@@ -370,6 +370,10 @@
       data.append("Parking and transport", dash(val("parking")));
       data.append("How they heard about us", dash(val("heard")));
       data.append("Notes", dash(val("notes")));
+      /* Ad-campaign source, filled by tracking.js; sent only when present. */
+      qsa("input[data-utm]", form).forEach(function (input) {
+        if (input.value.trim()) data.append(input.name, input.value.trim());
+      });
       return data;
     }
 
@@ -455,6 +459,9 @@
           fail("We could not send this just now. Please call +1 (902) 200-4888 or email admin@unscramble.ca." + activation);
         } else {
           showThanks();
+          try {
+            document.dispatchEvent(new CustomEvent("unscramble:form-success", { detail: { form: kind } }));
+          } catch (ignore) { /* tracking is optional */ }
         }
       } catch (err) {
         fail("We could not send this just now. Please call +1 (902) 200-4888 or email admin@unscramble.ca.");
