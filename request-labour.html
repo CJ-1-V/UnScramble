@@ -301,11 +301,15 @@
               <label for="notes">Notes</label>
               <textarea id="notes" rows="4" maxlength="2000"></textarea>
             </div>
+            <input type="hidden" name="UTM source" data-utm="utm_source">
+            <input type="hidden" name="UTM medium" data-utm="utm_medium">
+            <input type="hidden" name="UTM campaign" data-utm="utm_campaign">
+            <input type="hidden" name="UTM content" data-utm="utm_content">
             <div class="hp" aria-hidden="true">
               <label for="company-website">Company website</label>
               <input id="company-website" name="_honey" type="text" tabindex="-1" autocomplete="off">
             </div>
-            <p class="hint">Sent to the UnScramble team. We use this only to respond to your request.</p>
+            <p class="hint">Sent to the UnScramble team. We use this only to respond to your request. We use Meta and Google Analytics cookies to measure visits and ad results.</p>
             <div class="form-error" role="alert" hidden></div>
             <div class="step-actions">
               <button class="btn btn-line" type="button" data-back>Back</button>
@@ -380,5 +384,6 @@
   <script src="assets/js/forms-config.js"></script>
   <script src="assets/js/site.js"></script>
   <script src="assets/js/redesign.js"></script>
+  <script src="assets/js/tracking.js" defer></script>
 </body>
 </html>
