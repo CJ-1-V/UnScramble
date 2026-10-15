@@ -1,0 +1,7 @@
+{
+  "_comment": "Single source for UnScramble social URLs. Edit here, then run: python3 tools/build-social.py  (rewrites footer/contact icons + JSON-LD sameAs on all pages). Set google to a URL to add the Google Business icon.",
+  "facebook":  "https://www.facebook.com/people/UnScramble-The-HR-Company/61595247444794/",
+  "instagram": "https://www.instagram.com/unscramble_hr/",
+  "linkedin":  "https://www.linkedin.com/company/143992189/",
+  "google":    ""
+}
